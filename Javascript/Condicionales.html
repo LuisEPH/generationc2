@@ -9,7 +9,80 @@
 <body>
 <script>
     //Condicionales
-    
+    var edad = 19;
+
+        if(edad >= 18){//true
+            console.log("Es mayor de edad");
+        }
+        else {
+            console.log("Es menor de edad")
+        }
+        
+        //console.clear(); Limpia la pantalla
+        //Conectores &&(y), ||(o)
+        //parseInt = Transforma a entero
+        //prompt = Pide al usuario en string
+/*
+Tabla de Verdad
+p= dulce; q= manjar; r= mantequilla
+
+&& and ^ Y 
+2^2 = 4; 2^3= 2*2*2 = 8; 2^4=16
+p ^ q               
+V   V = V
+V   F = F
+F   V = F
+F   F = F
+
+p q r
+V V V= V
+V V F
+V F V
+V F F
+F V V
+F V F
+F F V
+F F F
+
+v || o             
+p v q
+V v V = V
+V v F = V
+F v V = V
+F v F = F
+*/
+        var nombre = prompt("Ingresa tu nombre completo");
+        console.log("Nombre completo:" , nombre)
+
+        var edad = parseInt(prompt("Ingresa tu edad",0));
+        console.log("Edad:" , edad)
+
+        var direccion = prompt("Ingresa tu dirección");
+        console.log("Dirección:" , direccion)
+
+        var telefono = parseInt(prompt("Ingresa tu número telefonico"));
+        console.log("telefono:" , telefono)
+
+        var email = prompt("Ingresa un correo");
+        console.log("email:" , email)
+
+        if(edad < 18 ){
+            console.log("Lo siento, no te puedes registrar");
+        }else{
+            console.log("Gracias por registrarte!");
+        }
+        
+        if (isNaN(edad)) {
+            alert("Es un tipo de dato permitido, Gracias por registrarte (Fuiste hackeado)");
+            document.write("La edad es NaN");
+            document.write("La edad no es NaN");
+        }
+        else {
+            alert("No es un tipo de dato permitido");
+            document.write("\nLa edad no es NaN");
+        }
+
+        document.write('<br>'+nombre +'<br>'+edad+'<br>'+direccion+'<br>'+telefono+'<br>'+email);
 
 </script>
 </body>
