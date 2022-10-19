@@ -8,30 +8,44 @@
 </head>
 <body>
 <script>
-    for(let i = 0; i < 10;i++){//i=10
+    /*for(let i = 0; i < 10;i++){//i=10
             console.log("el valor de i es",i);
-        }
+        }*/
         //respta: el valor de i es 0
         //respta: el valor de i es 1
         //respta: el valor de i es 2
         //...
         //respta: el valor de i es 9
 
-        console.clear();
+        /*console.clear();
         var numeros_pares=[2,4,6,8,10];
         numeros_pares[0];
         console.log("el arreglo es",numeros_pares);
-        /*
+        
         numeros_pares [numeros_pares.length-1] ; 
         numeros_pares [5-1];
-        numeros_pares [4];*/
+        numeros_pares [4];
         for (let i = 0; i < numeros_pares.length; i++) {//i=1
             console.log("la posicion es",i);
             console.log("el elemento es",numeros_pares[i]);
             console.log("");
+        }*/
+        var contador = 0; // definiendo variable
+        while (contador <= 5) { //validando, mientras sea verdadero
+            console.log("xD");//Se veces imprimira
+            contador++; // ++ Suma 1 a la variable contador
         }
 
-        
+        // Lograr terminar cuando contador sea == 200
+        var termino = true; // variable booleana (true o false)
+        var contador = 10;
+        while (termino) {
+            contador = contador + 10;
+            console.log("contador", contador);
+            if (contador == 200) {
+                termino = false;
+            }
+        }
 </script>
 </body>
 </html>
