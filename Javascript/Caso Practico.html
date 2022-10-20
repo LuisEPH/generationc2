@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+<script>
+//Caso Practico
+var dias=[1,2,3,4,5];//0,1,2,3,4 L,M,M,J,V
+var compra=[];
+var descuento=0;
+var arreglo=[200,5500,900,7000,500,300];
+var dia=parseInt(prompt("Indique que dia comprara"));
+console.log("1. Lunes");
+console.log("2. Martes");
+console.log("3. Miercoles");
+console.log("4. Jueves");
+console.log("5. Viernes");
+var cantidad=parseInt(prompt("Cuantos articulos comprara"));
+for(var conta=0;conta < cantidad ; conta++){
+    var valor=parseInt(prompt("Indique valor del articulo ",conta+1));
+    compra.push(valor);
+    var suma=suma+valor;
+    }
+function Funcion1(dia, compra)
+{//en numeros el dia
+if(dia=1){
+    function2();
+    console.log("Dia Lunes no hay descuento");
+    console.log("Los productos que digito son: ",compra);
+    console.log("El valor total es: ",suma);
+    }
+else if(dia=2){
+    function2();
+    descuento=suma*0.2;
+    console.log("El dia Martes hay un descuento de 20% en el total de su compra, siendo el total de: ",suma-descuento);
+    console.log("Los productos que digito son: ",compra);
+    }
+else if(dia=3){
+    function2();
+    console.log("Dia Miercoles no hay descuento");
+    console.log("Los productos que digito son: ",compra);
+    console.log("El valor total es: ",suma);
+    }
+else if(dia=4){
+    function2();
+    descuento=suma*0.2;
+    console.log("El dia Jueves hay un descuento de 20% en el total de su compra, siendo el total de: ",suma-descuento);
+    console.log("Los productos que digito son: ",compra);
+    }
+else if(dia=5){
+    function2();
+    console.log("Dia Vuiernes no hay descuento");
+    console.log("Los productos que digito son: ",compra);
+    console.log("El valor total es: ",suma);
+    }
+}
+
+function2(cantidad , compra)
+{
+    var mayor=functionMayor();
+    if(cantidad > 3 && mayor > 10000){
+        console.log("Por la compra de mas de 3 productos tiene descuento de un 5%");
+        return true;
+    }
+    else {
+        console.log("No cuenta con descuento debido a que no compro mas de 3 productos");
+        return false;
+    }
+}
+funcionMayor(arreglo)
+{
+        var mayor = arreglo[0];
+		for (var indice = 1; indice < arreglo.length; incide++) {
+			if (arreglo[indice] > mayor) {
+				mayor = arreglo[indice];
+			}
+		}
+		return mayor;
+}
+
+funcionMenor(arreglo)
+{
+        var menor=arreglo[0];
+        for (var indice = 1; indice < arreglo.length; incide++) {
+			if (arreglo[indice] < menor) {
+				menor = arreglo[indice];
+			}
+		}
+		return menor;
+}
+
+
+
+
+
+
+
+
+
+
+
+</script>
+</body>
+</html>
