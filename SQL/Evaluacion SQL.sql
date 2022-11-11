@@ -71,7 +71,7 @@ select * from tipoproductos t2  -- tipo productos lo uni con productos
 inner join productos p 
 on t2.id = p.tipoproductos_id
 
-SELECT (sum(precioUnidadV*cantidad)*12)-(sum(p.PrecioUnidadP*p.cantidadp)*12)
+SELECT (sum(precioUnidadV*cantidad)*12)-(sum(p.PrecioUnidadP*p.cantidadp)*12); -- Muestra los suma total de la ganancia del año
 FROM proveedores p,tienda t
 WHERE p.id = t.id; -- Ganancia total de todos los productos vendidos *12 para la venta por año
 
