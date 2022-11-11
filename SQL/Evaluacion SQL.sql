@@ -1,5 +1,5 @@
 create database EvaluacionSQL;
--- Entendi el programa como hacer todo distinto en ves de hacer 5 proveedores con 5 productos que sean iguales, aparte de tener mas variedad
+-- Entendi el programa como hacer todo distinto en ves de hacer 5 proveedores con 5 productos que sean iguales, aparte de tener mas variedad.
 create table proveedores (
 	id int primary key not null auto_increment,
 	nombre varchar(100) not null, -- Nombre proveedor
