@@ -71,12 +71,13 @@ select * from tipoproductos t2  -- tipo productos lo uni con productos
 inner join productos p 
 on t2.id = p.tipoproductos_id
 
-SELECT sum(precioUnidadV*cantidad)-sum(p.PrecioUnidadP*p.cantidadp)
+SELECT (sum(precioUnidadV*cantidad)*12)-(sum(p.PrecioUnidadP*p.cantidadp)*12)
 FROM proveedores p,tienda t
-WHERE p.id = t.id; -- Ganancia total de todos los productos vendidos
+WHERE p.id = t.id; -- Ganancia total de todos los productos vendidos *12 para la venta por año
 
+select nombreProducto,precioUnidadV*cantidad from tienda; -- Productos vendidos por mes
+select nombreProducto,precioUnidadV,cantidad from tienda; -- Productos con su cantidad vendida y precio unitario
 
--- select sum(precioUnidadV*cantidad) from tienda -- probando funciones
 -- union select sum(PrecioUnidadP*cantidadp) from proveedores; -- probando funciones
 
 -- select sum(PrecioUnidadP*cantidadp) from proveedores; -- probando funciones
